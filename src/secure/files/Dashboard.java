@@ -78,8 +78,8 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Decrypt Image");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 218, -1, -1));
+        jLabel4.setText("Decrypt Files");
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, -1, -1));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -105,8 +105,8 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Encrypt Image");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 218, -1, -1));
+        jLabel7.setText("Encrypt Files");
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
 
         dimage.setBackground(new java.awt.Color(255, 255, 255));
         dimage.setForeground(new java.awt.Color(255, 255, 255));
@@ -114,6 +114,11 @@ public class Dashboard extends javax.swing.JFrame {
         dimage.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         dimage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         dimage.setMinimumSize(new java.awt.Dimension(100, 100));
+        dimage.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dimageMouseClicked(evt);
+            }
+        });
         jPanel3.add(dimage, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 110, 110));
 
         etext.setBackground(new java.awt.Color(255, 255, 255));
@@ -122,6 +127,11 @@ public class Dashboard extends javax.swing.JFrame {
         etext.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         etext.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         etext.setMinimumSize(new java.awt.Dimension(100, 100));
+        etext.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                etextMouseClicked(evt);
+            }
+        });
         jPanel3.add(etext, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 110, 110));
 
         jLabel9.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
@@ -135,6 +145,11 @@ public class Dashboard extends javax.swing.JFrame {
         dtext.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         dtext.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         dtext.setMinimumSize(new java.awt.Dimension(100, 100));
+        dtext.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dtextMouseClicked(evt);
+            }
+        });
         jPanel3.add(dtext, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 110, 110));
 
         about.setBackground(new java.awt.Color(255, 255, 255));
@@ -143,6 +158,11 @@ public class Dashboard extends javax.swing.JFrame {
         about.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         about.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         about.setMinimumSize(new java.awt.Dimension(100, 100));
+        about.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aboutMouseClicked(evt);
+            }
+        });
         jPanel3.add(about, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 300, 110, 110));
 
         jLabel12.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
@@ -161,6 +181,11 @@ public class Dashboard extends javax.swing.JFrame {
         learn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         learn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         learn.setMinimumSize(new java.awt.Dimension(100, 100));
+        learn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                learnMouseClicked(evt);
+            }
+        });
         jPanel3.add(learn, new org.netbeans.lib.awtextra.AbsoluteConstraints(606, 98, 110, 110));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 800, 520));
@@ -176,6 +201,41 @@ public class Dashboard extends javax.swing.JFrame {
         dispose();
         
     }//GEN-LAST:event_eimageMouseClicked
+
+    private void dimageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dimageMouseClicked
+        // TODO add your handling code here:
+        DecryptImage d = new DecryptImage();
+        d.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_dimageMouseClicked
+
+    private void learnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_learnMouseClicked
+        // TODO add your handling code here:
+        Learn l = new Learn();
+        l.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_learnMouseClicked
+
+    private void etextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etextMouseClicked
+        // TODO add your handling code here:
+        EncryptText t = new EncryptText();
+        t.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_etextMouseClicked
+
+    private void dtextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dtextMouseClicked
+        // TODO add your handling code here:
+        DecryptText t = new DecryptText();
+        t.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_dtextMouseClicked
+
+    private void aboutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aboutMouseClicked
+        // TODO add your handling code here:
+        About l = new About();
+        l.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_aboutMouseClicked
 
     /**
      * @param args the command line arguments
@@ -205,11 +265,37 @@ public class Dashboard extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+     /*   java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Dashboard().setVisible(true);
             }
-        });
+        });*/
+     
+     Screen s=new Screen();
+        s.setVisible(true);
+        Dashboard d=new Dashboard();
+        int i;
+        try{
+            for(i=1;i<=100;i++)
+            {
+                Thread.sleep(30);
+                
+                s.jLabel2.setText(Integer.toString(i)+"%");
+                s.jProgressBar1.setValue(i);
+                if(i==100)
+                {
+                    Thread.sleep(1000);
+                }
+            }
+            if(i==101)
+            {
+                s.setVisible(false);
+                d.setVisible(true);
+            }
+        }
+        catch(InterruptedException e)
+        {
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -5,23 +5,16 @@
  */
 package secure.files;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author DELL
  */
-public class EncryptImage extends javax.swing.JFrame {
+public class EncryptText extends javax.swing.JFrame {
 
     /**
-     * Creates new form EncryptImage
+     * Creates new form EncryptText
      */
-    public EncryptImage() {
+    public EncryptText() {
         initComponents();
     }
 
@@ -37,7 +30,7 @@ public class EncryptImage extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         About = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -53,12 +46,6 @@ public class EncryptImage extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         EImage1 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -88,9 +75,9 @@ public class EncryptImage extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
-        jLabel6.setText("File Encryption");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, -1));
+        jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
+        jLabel8.setText("Encrypt Text");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, -1));
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -215,7 +202,7 @@ public class EncryptImage extends javax.swing.JFrame {
 
         jPanel3.add(DText, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 160, 30));
 
-        EImage.setBackground(new java.awt.Color(255, 153, 0));
+        EImage.setBackground(new java.awt.Color(255, 255, 255));
         EImage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         EImage.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -249,7 +236,7 @@ public class EncryptImage extends javax.swing.JFrame {
 
         jPanel3.add(EImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 150, 30));
 
-        EText.setBackground(new java.awt.Color(255, 255, 255));
+        EText.setBackground(new java.awt.Color(255, 153, 0));
         EText.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         EText.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -318,61 +305,6 @@ public class EncryptImage extends javax.swing.JFrame {
         jPanel3.add(EImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 140, 30));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 520));
-
-        jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jLabel4.setText("Enter API Key :");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 140, 30));
-
-        jTextField1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField1MouseClicked(evt);
-            }
-        });
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 210, 30));
-
-        jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jLabel7.setText("Choose File : ");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 130, 30));
-
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jButton1.setText("Open Files");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, 210, 30));
-
-        jLabel13.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("Encrypt");
-        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel13MouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 190, 30));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 800, 520));
 
@@ -445,45 +377,15 @@ public class EncryptImage extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_EImage1MouseClicked
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jTextField1ActionPerformed
-  
-    private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
-        // TODO add your handling code here:
-        
-        
-    }//GEN-LAST:event_jTextField1MouseClicked
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        String text = jTextField1.getText();
-        int temp = Integer.parseInt(text);
-        JFileChooser fc = new JFileChooser();
-        fc.showOpenDialog(null);
-        File file = fc.getSelectedFile();
-        operate(temp,file);
-        
-         
-        
-         
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
-        // TODO add your handling code here:
-       
-       JOptionPane.showMessageDialog(null, "File Encrypted successfully");
-        
-    }//GEN-LAST:event_jLabel13MouseClicked
-    
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
-       
-
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -491,18 +393,21 @@ public class EncryptImage extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EncryptImage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(EncryptText.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(EncryptText.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(EncryptText.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(EncryptText.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
             public void run() {
-                new EncryptImage().setVisible(true);
+                new EncryptText().setVisible(true);
             }
         });
     }
@@ -515,51 +420,17 @@ public class EncryptImage extends javax.swing.JFrame {
     private javax.swing.JPanel EImage1;
     private javax.swing.JPanel EText;
     private javax.swing.JPanel Home;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
-public void operate(int key, File file)
-{
-    
-    
-   try
-        {
-            FileInputStream fis = new FileInputStream(file);
-            byte []data = new byte[fis.available()];
-            fis.read(data);
-            int i=0;
-            for(byte b:data)
-            {
-                data[i]=(byte)(b^key);
-                i++;
-            }
-            FileOutputStream fo = new FileOutputStream(file);
-            fo.write(data);
-            fo.close();
-            fis.close();
-            
-        }
-        catch(IOException e)
-        {
-            JOptionPane.showMessageDialog(null, e);
-        }
-} 
-    
-    
 }

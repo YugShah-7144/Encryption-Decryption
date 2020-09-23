@@ -27,8 +27,14 @@ public class Learn extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
         About = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -44,18 +50,52 @@ public class Learn extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         EImage1 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel1.setPreferredSize(new java.awt.Dimension(800, 87));
+
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 48)); // NOI18N
+        jLabel2.setText("Secure Files");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel2)
+                .addContainerGap(502, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 80));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
         jLabel8.setText("Learn How To Use :");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, -1));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 20, 330, -1));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Hello Users,\n           \n1) Encryption is the process of converting normal message\n    (plaintext) into meaningless message (Ciphertext). \n2) Decryption is the process of converting meaningless \n    message (Ciphertext) into its original form (Plaintext).\n\nAny message can be encrypted with either secret key\nor public key. This Secret key is called API key ( Application\nProgramming Interface Key). Without that key you can not\nDecrypt your file/text. If you use wrong key to decrypt file \nthen you might be lose your file. so it is highly recommanded\nto remember that key\n\nIn this app you will see 4 main sections\n\n1) Encrypt Files :  In this part you have to enter key and cho-\n   ose the files. After that hit the Encrypt Button. Within few sec.\n   your file is encrypted.it's visible in that particular folder\n   but you can't see it. it's meaning-less. It is preferable that \n   choose file less than 1 GB for better performance\n\n2) Decrypt Files :  Same as Encrypt Part. but remeber one\n    thing. enter only key that you used to encrypt that file.\n    otherwise your file might be destroy.\n\n3) Encrypt Text : the process is same but in this section, you\n    can encrypt your random text. and copy paste that text \n    and send it your friends\n\n4) Decrypt Text : if someone gives you encrypted text and \n    key then you copy  that text and key and you will see \n    decrypted text.\n\nSo that's it ! now time to use this app. We hope you like it.\nEnjoy..!! For any query contact us. Information in about \nsection");
+        jTextArea1.setEditable(false);
+        jScrollPane2.setViewportView(jTextArea1);
+
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 580, 430));
+
+        jScrollPane1.setViewportView(jPanel2);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 600, 520));
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -76,8 +116,8 @@ public class Learn extends javax.swing.JFrame {
         AboutLayout.setHorizontalGroup(
             AboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AboutLayout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jLabel1)
+                .addGap(0, 2, Short.MAX_VALUE))
         );
         AboutLayout.setVerticalGroup(
             AboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,11 +196,6 @@ public class Learn extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel9.setText("Decrypt Text");
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout DTextLayout = new javax.swing.GroupLayout(DText);
         DText.setLayout(DTextLayout);
@@ -190,11 +225,6 @@ public class Learn extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel10.setText("Encrypt File");
-        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel10MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout EImageLayout = new javax.swing.GroupLayout(EImage);
         EImage.setLayout(EImageLayout);
@@ -203,7 +233,7 @@ public class Learn extends javax.swing.JFrame {
             .addGroup(EImageLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel10)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         EImageLayout.setVerticalGroup(
             EImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,11 +254,6 @@ public class Learn extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel11.setText("Encrypt Text");
-        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel11MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout ETextLayout = new javax.swing.GroupLayout(EText);
         EText.setLayout(ETextLayout);
@@ -250,19 +275,9 @@ public class Learn extends javax.swing.JFrame {
 
         EImage1.setBackground(new java.awt.Color(255, 153, 0));
         EImage1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        EImage1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                EImage1MouseClicked(evt);
-            }
-        });
 
         jLabel12.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel12.setText("Learn App");
-        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel12MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout EImage1Layout = new javax.swing.GroupLayout(EImage1);
         EImage1.setLayout(EImage1Layout);
@@ -271,7 +286,7 @@ public class Learn extends javax.swing.JFrame {
             .addGroup(EImage1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel12)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         EImage1Layout.setVerticalGroup(
             EImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -282,31 +297,7 @@ public class Learn extends javax.swing.JFrame {
 
         jPanel3.add(EImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 140, 30));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 520));
-
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 800, 520));
-
-        jPanel1.setBackground(new java.awt.Color(255, 153, 0));
-        jPanel1.setPreferredSize(new java.awt.Dimension(800, 87));
-
-        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 48)); // NOI18N
-        jLabel2.setText("Secure Files");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel2)
-                .addContainerGap(502, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 80));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 200, 520));
 
         pack();
         setLocationRelativeTo(null);
@@ -316,6 +307,7 @@ public class Learn extends javax.swing.JFrame {
         // TODO add your handling code here:
         About l = new About();
         l.setVisible(true);
+        l.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_AboutMouseClicked
 
@@ -323,6 +315,7 @@ public class Learn extends javax.swing.JFrame {
         // TODO add your handling code here:
         Dashboard d= new Dashboard();
         d.setVisible(true);
+        d.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_HomeMouseClicked
 
@@ -330,52 +323,33 @@ public class Learn extends javax.swing.JFrame {
         // TODO add your handling code here:
         DecryptImage d = new DecryptImage();
         d.setVisible(true);
+        d.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_DImageMouseClicked
-
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        // TOD add your handling code here:
-    }//GEN-LAST:event_jLabel9MouseClicked
 
     private void DTextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DTextMouseClicked
         // TODO add your handling code here:
         DecryptText t = new DecryptText();
         t.setVisible(true);
+        t.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_DTextMouseClicked
-
-    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel10MouseClicked
 
     private void EImageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EImageMouseClicked
         // TODO add your handling code here:
         EncryptImage e = new EncryptImage();
         e.setVisible(true);
+        e.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_EImageMouseClicked
-
-    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel11MouseClicked
 
     private void ETextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ETextMouseClicked
         // TODO add your handling code here:
         EncryptText t = new EncryptText();
         t.setVisible(true);
+        t.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_ETextMouseClicked
-
-    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel12MouseClicked
-
-    private void EImage1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EImage1MouseClicked
-        // TODO add your handling code here:
-        Learn l = new Learn();
-        l.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_EImage1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -432,5 +406,9 @@ public class Learn extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPopupMenu jPopupMenu1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

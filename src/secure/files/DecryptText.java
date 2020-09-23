@@ -98,8 +98,8 @@ public class DecryptText extends javax.swing.JFrame {
         AboutLayout.setHorizontalGroup(
             AboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AboutLayout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jLabel1)
+                .addGap(0, 7, Short.MAX_VALUE))
         );
         AboutLayout.setVerticalGroup(
             AboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,7 +128,7 @@ public class DecryptText extends javax.swing.JFrame {
             .addGroup(HomeLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         HomeLayout.setVerticalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,7 +157,7 @@ public class DecryptText extends javax.swing.JFrame {
             .addGroup(DImageLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         DImageLayout.setVerticalGroup(
             DImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,19 +170,9 @@ public class DecryptText extends javax.swing.JFrame {
 
         DText.setBackground(new java.awt.Color(255, 153, 0));
         DText.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        DText.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                DTextMouseClicked(evt);
-            }
-        });
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel9.setText("Decrypt Text");
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout DTextLayout = new javax.swing.GroupLayout(DText);
         DText.setLayout(DTextLayout);
@@ -191,7 +181,7 @@ public class DecryptText extends javax.swing.JFrame {
             .addGroup(DTextLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel9)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         DTextLayout.setVerticalGroup(
             DTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -212,11 +202,6 @@ public class DecryptText extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel10.setText("Encrypt File");
-        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel10MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout EImageLayout = new javax.swing.GroupLayout(EImage);
         EImage.setLayout(EImageLayout);
@@ -246,11 +231,6 @@ public class DecryptText extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel11.setText("Encrypt Text");
-        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel11MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout ETextLayout = new javax.swing.GroupLayout(EText);
         EText.setLayout(ETextLayout);
@@ -280,11 +260,6 @@ public class DecryptText extends javax.swing.JFrame {
 
         jLabel12.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel12.setText("Learn App");
-        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel12MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout EImage1Layout = new javax.swing.GroupLayout(EImage1);
         EImage1.setLayout(EImage1Layout);
@@ -316,6 +291,7 @@ public class DecryptText extends javax.swing.JFrame {
         // TODO add your handling code here:
         About l = new About();
         l.setVisible(true);
+        l.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_AboutMouseClicked
 
@@ -323,6 +299,7 @@ public class DecryptText extends javax.swing.JFrame {
         // TODO add your handling code here:
         Dashboard d= new Dashboard();
         d.setVisible(true);
+        d.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_HomeMouseClicked
 
@@ -330,50 +307,31 @@ public class DecryptText extends javax.swing.JFrame {
         // TODO add your handling code here:
         DecryptImage d = new DecryptImage();
         d.setVisible(true);
+        d.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_DImageMouseClicked
-
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        // TOD add your handling code here:
-    }//GEN-LAST:event_jLabel9MouseClicked
-
-    private void DTextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DTextMouseClicked
-        // TODO add your handling code here:
-        DecryptText t = new DecryptText();
-        t.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_DTextMouseClicked
-
-    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel10MouseClicked
 
     private void EImageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EImageMouseClicked
         // TODO add your handling code here:
         EncryptImage e = new EncryptImage();
         e.setVisible(true);
+        e.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_EImageMouseClicked
-
-    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel11MouseClicked
 
     private void ETextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ETextMouseClicked
         // TODO add your handling code here:
         EncryptText t = new EncryptText();
         t.setVisible(true);
+        t.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_ETextMouseClicked
-
-    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel12MouseClicked
 
     private void EImage1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EImage1MouseClicked
         // TODO add your handling code here:
         Learn l = new Learn();
         l.setVisible(true);
+        l.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_EImage1MouseClicked
 

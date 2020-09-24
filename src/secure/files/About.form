@@ -342,7 +342,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="290" y="230" width="20" height="350"/>
+                  <AbsoluteConstraints x="290" y="230" width="10" height="350"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -351,14 +351,12 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Century Gothic" size="18" style="0"/>
                 </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Raj Patel"/>
               </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel13MouseClicked"/>
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="410" y="350" width="90" height="30"/>
+                  <AbsoluteConstraints x="410" y="350" width="100" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -367,14 +365,12 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Century Gothic" size="18" style="0"/>
                 </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Yug Shah"/>
               </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel14MouseClicked"/>
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="100" y="350" width="90" height="30"/>
+                  <AbsoluteConstraints x="100" y="350" width="100" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -385,9 +381,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="  Course : B.Tech CE"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
-              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jTextField1.setEditable(false);"/>
               </AuxValues>
@@ -404,9 +397,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="  Id : 19DCE131"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
-              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jTextField2.setEditable(false);"/>
               </AuxValues>
@@ -423,9 +413,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="  Id : 19DCE110"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField3ActionPerformed"/>
-              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jTextField3.setEditable(false);"/>
               </AuxValues>
@@ -442,9 +429,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="  Email : 19dce131@charusat.edu.in"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField4ActionPerformed"/>
-              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jTextField4.setEditable(false);"/>
               </AuxValues>
@@ -461,9 +445,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="  Email : 19dce110@charusat.edu.in"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField5ActionPerformed"/>
-              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jTextField5.setEditable(false);"/>
               </AuxValues>
@@ -480,9 +461,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="  Call : 8141667785"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField6ActionPerformed"/>
-              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jTextField6.setEditable(false);"/>
               </AuxValues>
@@ -499,9 +477,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="  Course : B.Tech CE"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField7ActionPerformed"/>
-              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jTextField7.setEditable(false);"/>
               </AuxValues>
@@ -518,9 +493,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="  Call : 7016937842"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField8ActionPerformed"/>
-              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jTextField8.setEditable(false);"/>
               </AuxValues>

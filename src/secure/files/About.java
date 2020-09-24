@@ -215,103 +215,55 @@ public class About extends javax.swing.JFrame {
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel5.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 20, 350));
+        jPanel5.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 10, 350));
 
         jLabel13.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("Raj Patel");
-        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel13MouseClicked(evt);
-            }
-        });
-        jPanel5.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, 90, 30));
+        jPanel5.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, 100, 30));
 
         jLabel14.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Yug Shah");
-        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel14MouseClicked(evt);
-            }
-        });
-        jPanel5.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 90, 30));
+        jPanel5.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 100, 30));
 
         jTextField1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField1.setText("  Course : B.Tech CE");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
         jTextField1.setEditable(false);
         jPanel5.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 490, 270, 30));
 
         jTextField2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField2.setText("  Id : 19DCE131");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
         jTextField2.setEditable(false);
         jPanel5.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 270, 30));
 
         jTextField3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField3.setText("  Id : 19DCE110");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
         jTextField3.setEditable(false);
         jPanel5.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, 270, 30));
 
         jTextField4.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField4.setText("  Email : 19dce131@charusat.edu.in");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
         jTextField4.setEditable(false);
         jPanel5.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 270, 30));
 
         jTextField5.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField5.setText("  Email : 19dce110@charusat.edu.in");
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
         jTextField5.setEditable(false);
         jPanel5.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 270, 30));
 
         jTextField6.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField6.setText("  Call : 8141667785");
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
-            }
-        });
         jTextField6.setEditable(false);
         jPanel5.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 540, 270, 30));
 
         jTextField7.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField7.setText("  Course : B.Tech CE");
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
-            }
-        });
         jTextField7.setEditable(false);
         jPanel5.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, 270, 30));
 
         jTextField8.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField8.setText("  Call : 7016937842");
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
-            }
-        });
         jTextField8.setEditable(false);
         jPanel5.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 540, 270, 30));
 
@@ -589,46 +541,6 @@ public class About extends javax.swing.JFrame {
         l.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_EImage1MouseClicked
-
-    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel13MouseClicked
-
-    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel14MouseClicked
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
-
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
-
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
-
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
-
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
 
     /**
      * @param args the command line arguments

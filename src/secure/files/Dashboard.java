@@ -1,5 +1,8 @@
 package secure.files;
 
+import java.awt.Color;
+import javax.swing.UIManager;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -46,6 +49,7 @@ public class Dashboard extends javax.swing.JFrame {
         learn = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 153, 0));
@@ -198,6 +202,7 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         EncryptImage f = new EncryptImage();
         f.setVisible(true);
+        f.setTitle("Secure Files");
         dispose();
         
     }//GEN-LAST:event_eimageMouseClicked
@@ -206,6 +211,7 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         DecryptImage d = new DecryptImage();
         d.setVisible(true);
+        d.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_dimageMouseClicked
 
@@ -213,6 +219,7 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         Learn l = new Learn();
         l.setVisible(true);
+        l.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_learnMouseClicked
 
@@ -220,6 +227,7 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         EncryptText t = new EncryptText();
         t.setVisible(true);
+        t.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_etextMouseClicked
 
@@ -227,6 +235,7 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         DecryptText t = new DecryptText();
         t.setVisible(true);
+        t.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_dtextMouseClicked
 
@@ -234,6 +243,7 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         About l = new About();
         l.setVisible(true);
+        l.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_aboutMouseClicked
 
@@ -263,7 +273,7 @@ public class Dashboard extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
      /*   java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -271,14 +281,20 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });*/
      
-     Screen s=new Screen();
+        Screen s=new Screen();
+
         s.setVisible(true);
         Dashboard d=new Dashboard();
+        d.setTitle("Secure Files");
+        
         int i;
         try{
+            
             for(i=1;i<=100;i++)
             {
-                Thread.sleep(30);
+                s.jProgressBar1.setForeground(Color.red);
+            s.jProgressBar1.setBackground(Color.blue);
+                Thread.sleep(20);
                 
                 s.jLabel2.setText(Integer.toString(i)+"%");
                 s.jProgressBar1.setValue(i);

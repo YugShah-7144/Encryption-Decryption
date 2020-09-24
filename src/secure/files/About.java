@@ -453,6 +453,7 @@ public class About extends javax.swing.JFrame {
         // TODO add your handling code here:
         About l = new About();
         l.setVisible(true);
+        l.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_AboutMouseClicked
 
@@ -460,6 +461,7 @@ public class About extends javax.swing.JFrame {
         // TODO add your handling code here:
         Dashboard d= new Dashboard();
         d.setVisible(true);
+        d.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_HomeMouseClicked
 
@@ -467,6 +469,7 @@ public class About extends javax.swing.JFrame {
         // TODO add your handling code here:
         DecryptImage d = new DecryptImage();
         d.setVisible(true);
+        d.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_DImageMouseClicked
 
@@ -479,6 +482,7 @@ public class About extends javax.swing.JFrame {
         // TODO add your handling code here:
         DecryptText t = new DecryptText();
         t.setVisible(true);
+        t.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_DTextMouseClicked
 
@@ -491,6 +495,7 @@ public class About extends javax.swing.JFrame {
         // TODO add your handling code here:
         EncryptImage e = new EncryptImage();
         e.setVisible(true);
+        e.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_EImageMouseClicked
 
@@ -503,6 +508,7 @@ public class About extends javax.swing.JFrame {
         // TODO add your handling code here:
         EncryptText t = new EncryptText();
         t.setVisible(true);
+        t.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_ETextMouseClicked
 
@@ -514,6 +520,7 @@ public class About extends javax.swing.JFrame {
         // TODO add your handling code here:
         Learn l = new Learn();
         l.setVisible(true);
+        l.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_EImage1MouseClicked
 

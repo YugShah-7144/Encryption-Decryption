@@ -77,6 +77,11 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <Properties>
+        <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
+        <Property name="verticalScrollBarPolicy" type="int" value="21"/>
+        <Property name="wheelScrollingEnabled" type="boolean" value="false"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="200" y="80" width="600" height="520"/>
@@ -110,6 +115,12 @@
               </Constraints>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+              <Properties>
+                <Property name="horizontalScrollBarPolicy" type="int" value="32"/>
+                <Property name="verticalScrollBarPolicy" type="int" value="22"/>
+                <Property name="autoscrolls" type="boolean" value="true"/>
+                <Property name="wheelScrollingEnabled" type="boolean" value="false"/>
+              </Properties>
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
@@ -128,7 +139,7 @@
                       <Font name="Century Gothic" size="18" style="0"/>
                     </Property>
                     <Property name="rows" type="int" value="5"/>
-                    <Property name="text" type="java.lang.String" value="Hello Users,&#xa;           &#xa;1) Encryption is the process of converting normal message&#xa;    (plaintext) into meaningless message (Ciphertext). &#xa;2) Decryption is the process of converting meaningless &#xa;    message (Ciphertext) into its original form (Plaintext).&#xa;&#xa;Any message can be encrypted with either secret key&#xa;or public key. This Secret key is called API key ( Application&#xa;Programming Interface Key). Without that key you can not&#xa;Decrypt your file/text. If you use wrong key to decrypt file &#xa;then you might be lose your file. so it is highly recommanded&#xa;to remember that key&#xa;&#xa;In this app you will see 4 main sections&#xa;&#xa;1) Encrypt Files :  In this part you have to enter key and cho-&#xa;   ose the files. After that hit the Encrypt Button. Within few sec.&#xa;   your file is encrypted.it&apos;s visible in that particular folder&#xa;   but you can&apos;t see it. it&apos;s meaning-less. It is preferable that &#xa;   choose file less than 1 GB for better performance&#xa;&#xa;2) Decrypt Files :  Same as Encrypt Part. but remeber one&#xa;    thing. enter only key that you used to encrypt that file.&#xa;    otherwise your file might be destroy.&#xa;&#xa;3) Encrypt Text : the process is same but in this section, you&#xa;    can encrypt your random text. and copy paste that text &#xa;    and send it your friends&#xa;&#xa;4) Decrypt Text : if someone gives you encrypted text and &#xa;    key then you copy  that text and key and you will see &#xa;    decrypted text.&#xa;&#xa;So that&apos;s it ! now time to use this app. We hope you like it.&#xa;Enjoy..!! For any query contact us. Information in about &#xa;section"/>
+                    <Property name="text" type="java.lang.String" value="Hello Users,&#xa;           &#xa;1) Encryption is the process of converting normal message&#xa;    (plaintext) into meaningless message (Ciphertext). &#xa;2) Decryption is the process of converting meaningless &#xa;    message (Ciphertext) into its original form (Plaintext).&#xa;&#xa;Any message can be encrypted with either secret key&#xa;or public key. This Secret key is called API key ( Application&#xa;Programming Interface Key). Without that key you can not&#xa;Decrypt your file/text. If you use wrong key to decrypt file &#xa;then you might be lose your file. so it is highly recommanded&#xa;to remember that key.&#xa;&#xa;In this app you will see 4 main sections&#xa;&#xa;1) Encrypt Files :  In this part you have to enter key and cho-&#xa;   ose the files. After that hit the Encrypt Button. Within few sec.&#xa;   your file is encrypted.it&apos;s visible in that particular folder&#xa;   but you can&apos;t see it. it&apos;s meaning-less. It is preferable that &#xa;   choose file less than 1 GB for better performance&#xa;&#xa;2) Decrypt Files :  Same as Encrypt Part. but remeber one&#xa;    thing. enter only key that you used to encrypt that file.&#xa;    otherwise your file might be destroy.&#xa;&#xa;3) Encrypt Text : the process is same but in this section, you&#xa;    can encrypt your random text. and copy paste that text &#xa;    and send it your friends&#xa;&#xa;4) Decrypt Text : if someone gives you encrypted text and &#xa;    key then you copy  that text and key and you will see &#xa;    decrypted text.&#xa;&#xa;So that&apos;s it ! now time to use this app. We hope you like it.&#xa;Enjoy..!! For any query contact us. Information in about &#xa;section"/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jTextArea1.setEditable(false);"/>

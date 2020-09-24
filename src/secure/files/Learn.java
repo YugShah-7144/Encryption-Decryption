@@ -77,6 +77,10 @@ public class Learn extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 80));
 
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane1.setWheelScrollingEnabled(false);
+
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -84,10 +88,15 @@ public class Learn extends javax.swing.JFrame {
         jLabel8.setText("Learn How To Use :");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 20, 330, -1));
 
+        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        jScrollPane2.setAutoscrolls(true);
+        jScrollPane2.setWheelScrollingEnabled(false);
+
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("Hello Users,\n           \n1) Encryption is the process of converting normal message\n    (plaintext) into meaningless message (Ciphertext). \n2) Decryption is the process of converting meaningless \n    message (Ciphertext) into its original form (Plaintext).\n\nAny message can be encrypted with either secret key\nor public key. This Secret key is called API key ( Application\nProgramming Interface Key). Without that key you can not\nDecrypt your file/text. If you use wrong key to decrypt file \nthen you might be lose your file. so it is highly recommanded\nto remember that key\n\nIn this app you will see 4 main sections\n\n1) Encrypt Files :  In this part you have to enter key and cho-\n   ose the files. After that hit the Encrypt Button. Within few sec.\n   your file is encrypted.it's visible in that particular folder\n   but you can't see it. it's meaning-less. It is preferable that \n   choose file less than 1 GB for better performance\n\n2) Decrypt Files :  Same as Encrypt Part. but remeber one\n    thing. enter only key that you used to encrypt that file.\n    otherwise your file might be destroy.\n\n3) Encrypt Text : the process is same but in this section, you\n    can encrypt your random text. and copy paste that text \n    and send it your friends\n\n4) Decrypt Text : if someone gives you encrypted text and \n    key then you copy  that text and key and you will see \n    decrypted text.\n\nSo that's it ! now time to use this app. We hope you like it.\nEnjoy..!! For any query contact us. Information in about \nsection");
+        jTextArea1.setText("Hello Users,\n           \n1) Encryption is the process of converting normal message\n    (plaintext) into meaningless message (Ciphertext). \n2) Decryption is the process of converting meaningless \n    message (Ciphertext) into its original form (Plaintext).\n\nAny message can be encrypted with either secret key\nor public key. This Secret key is called API key ( Application\nProgramming Interface Key). Without that key you can not\nDecrypt your file/text. If you use wrong key to decrypt file \nthen you might be lose your file. so it is highly recommanded\nto remember that key.\n\nIn this app you will see 4 main sections\n\n1) Encrypt Files :  In this part you have to enter key and cho-\n   ose the files. After that hit the Encrypt Button. Within few sec.\n   your file is encrypted.it's visible in that particular folder\n   but you can't see it. it's meaning-less. It is preferable that \n   choose file less than 1 GB for better performance\n\n2) Decrypt Files :  Same as Encrypt Part. but remeber one\n    thing. enter only key that you used to encrypt that file.\n    otherwise your file might be destroy.\n\n3) Encrypt Text : the process is same but in this section, you\n    can encrypt your random text. and copy paste that text \n    and send it your friends\n\n4) Decrypt Text : if someone gives you encrypted text and \n    key then you copy  that text and key and you will see \n    decrypted text.\n\nSo that's it ! now time to use this app. We hope you like it.\nEnjoy..!! For any query contact us. Information in about \nsection");
         jTextArea1.setEditable(false);
         jScrollPane2.setViewportView(jTextArea1);
 

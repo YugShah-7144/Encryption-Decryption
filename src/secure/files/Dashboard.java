@@ -1,7 +1,6 @@
 package secure.files;
 
 import java.awt.Color;
-import javax.swing.UIManager;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -294,7 +293,7 @@ public class Dashboard extends javax.swing.JFrame {
             {
                 s.jProgressBar1.setForeground(Color.red);
             s.jProgressBar1.setBackground(Color.blue);
-                Thread.sleep(20);
+                Thread.sleep(15);
                 
                 s.jLabel2.setText(Integer.toString(i)+"%");
                 s.jProgressBar1.setValue(i);

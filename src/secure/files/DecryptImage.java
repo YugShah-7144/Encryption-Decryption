@@ -56,8 +56,8 @@ public class DecryptImage extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jPanel5 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         file_name = new javax.swing.JLabel();
@@ -323,6 +323,7 @@ public class DecryptImage extends javax.swing.JFrame {
         });
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, 210, 30));
 
+        jLabel13.setBackground(new java.awt.Color(255, 153, 0));
         jLabel13.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("Decrypt");
@@ -331,33 +332,35 @@ public class DecryptImage extends javax.swing.JFrame {
                 jLabel13MouseClicked(evt);
             }
         });
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 390, 190, 30));
+
+        jPanel5.setBackground(new java.awt.Color(255, 153, 0));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(0, 190, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGap(0, 30, Short.MAX_VALUE)
         );
 
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, 190, 30));
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 390, 190, 30));
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel6.setText("Enter API Key :");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 140, 30));
 
-        jLabel14.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jLabel14.setText("Selected File :");
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, -1, -1));
 
+        file_name.setBackground(new java.awt.Color(255, 255, 255));
         file_name.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        file_name.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        file_name.setOpaque(true);
         jPanel2.add(file_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 510, 20));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 800, 520));
@@ -450,7 +453,9 @@ public class DecryptImage extends javax.swing.JFrame {
                 int i=0;
                 for(byte b:data)
                 {
+                    //System.out.println(b);
                     data[i]=(byte)(b^key);
+                    data[i]=(byte)(data[i]-key);
                     i++;
                 }
                 FileOutputStream fos=new FileOutputStream(file_name.getText());
@@ -468,7 +473,7 @@ public class DecryptImage extends javax.swing.JFrame {
         }
         catch (Exception e)
         {
-            JOptionPane.showMessageDialog(null,"Please Enter Key First");
+            JOptionPane.showMessageDialog(null,"Invalid Key");
         }
     }//GEN-LAST:event_jLabel13MouseClicked
 

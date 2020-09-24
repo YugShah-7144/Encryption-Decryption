@@ -334,6 +334,8 @@ public class EncryptImage extends javax.swing.JFrame {
         });
         jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, 190, 33));
 
+        jPanel5.setBackground(new java.awt.Color(255, 153, 0));
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -347,17 +349,19 @@ public class EncryptImage extends javax.swing.JFrame {
 
         jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, 190, 30));
 
-        jLabel14.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jLabel14.setText("Selected File :");
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, -1, -1));
 
+        file_name.setBackground(new java.awt.Color(255, 255, 255));
         file_name.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        file_name.setOpaque(true);
         jPanel2.add(file_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 510, 20));
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel8.setText("*Note : It is prefereble to use less than 1Gb file for better performance ");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 460, 410, 30));
+        jLabel8.setText("*Note : It is prefereble to use less than 1Gb file  ");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 460, 300, 30));
 
         jLabel15.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel15.setText("*Please enter only number as API to encrypt ");
@@ -453,7 +457,11 @@ public class EncryptImage extends javax.swing.JFrame {
                 
                 for(byte b:data)
                 {                  
+                    //System.out.println(b);
+                    data[i]=(byte)(b+key);
+                        
                     data[i]=(byte)(data[i]^key);
+                    
                     i++;
                 }
                 FileOutputStream fos=new FileOutputStream(file_name.getText());
@@ -471,7 +479,7 @@ public class EncryptImage extends javax.swing.JFrame {
         }
         catch (Exception e)
         {
-            JOptionPane.showMessageDialog(null,"Please Enter Key First");
+            JOptionPane.showMessageDialog(null,"Invalid Key");
         }
     }//GEN-LAST:event_jLabel13MouseClicked
     

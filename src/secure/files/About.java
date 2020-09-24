@@ -27,17 +27,26 @@ public class About extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jLabel4 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
@@ -46,7 +55,7 @@ public class About extends javax.swing.JFrame {
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         About = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -63,7 +72,102 @@ public class About extends javax.swing.JFrame {
         EImage1 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
 
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel6.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel8MouseClicked(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        jLabel4.setText("LEARN");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addContainerGap(59, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addGap(0, 4, Short.MAX_VALUE)
+                .addComponent(jLabel4))
+        );
+
+        jPanel6.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 130, 30));
+
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel9MouseClicked(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        jLabel6.setText("HOME");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addGap(0, 4, Short.MAX_VALUE)
+                .addComponent(jLabel6))
+        );
+
+        jPanel6.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 100, 30));
+
+        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel7.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        jLabel7.setText("DECRYPT IMAGE");
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addGap(0, 4, Short.MAX_VALUE)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel6.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, -1, 30));
+
+        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 520));
+
+        jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
+        jLabel8.setText("About Us");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, -1));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 153, 0));
@@ -79,7 +183,7 @@ public class About extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jLabel2)
-                .addContainerGap(502, Short.MAX_VALUE))
+                .addContainerGap(504, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,14 +192,14 @@ public class About extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 80));
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel2.setMaximumSize(new java.awt.Dimension(500, 500));
-        jPanel2.setMinimumSize(new java.awt.Dimension(500, 500));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel4.setMaximumSize(new java.awt.Dimension(500, 500));
+        jPanel4.setMinimumSize(new java.awt.Dimension(500, 500));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
-        jLabel8.setText("About Us");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+        jLabel13.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
+        jLabel13.setText("About Us");
+        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
@@ -104,82 +208,47 @@ public class About extends javax.swing.JFrame {
         jTextArea1.setEditable(false);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 560, 140));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/secure/files/Devloper2.jpg"))); // NOI18N
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, -1, -1));
+        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 560, 140));
+        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, -1, -1));
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 20, 350));
+        jPanel4.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 20, 350));
 
-        jLabel13.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jLabel13.setText("Raj Patel");
-        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel13MouseClicked(evt);
-            }
-        });
-        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, 90, 30));
+        jLabel15.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("Raj Patel");
+        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 90, 30));
 
-        jLabel14.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jLabel14.setText("Yug Shah");
-        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel14MouseClicked(evt);
-            }
-        });
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 90, 30));
+        jLabel16.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Yug Shah");
+        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 90, 30));
 
         jTextField1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField1.setText("  Course : B.Tech CE");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
         jTextField1.setEditable(false);
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 490, 270, 30));
+        jPanel4.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 410, 270, 30));
 
         jTextField2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField2.setText("  Id : 19DCE131");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
         jTextField2.setEditable(false);
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 270, 30));
+        jPanel4.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 270, 30));
 
         jTextField3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField3.setText("  Id : 19DCE110");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
         jTextField3.setEditable(false);
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, 270, 30));
+        jPanel4.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 270, 30));
 
         jTextField4.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField4.setText("  Email : 19dce131@charusat.edu.in");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
         jTextField4.setEditable(false);
-        jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 270, 30));
+        jPanel4.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 270, 30));
 
         jTextField5.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField5.setText("  Email : 19dce110@charusat.edu.in");
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
         jTextField5.setEditable(false);
-        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 270, 30));
+        jPanel4.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 270, 30));
 
         jTextField6.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField6.setText("  Call : 8141667785");
@@ -189,17 +258,12 @@ public class About extends javax.swing.JFrame {
             }
         });
         jTextField6.setEditable(false);
-        jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 540, 270, 30));
+        jPanel4.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 470, 270, 30));
 
         jTextField7.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField7.setText("  Course : B.Tech CE");
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
-            }
-        });
         jTextField7.setEditable(false);
-        jPanel2.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, 270, 30));
+        jPanel4.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 270, 30));
 
         jTextField8.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTextField8.setText("  Call : 7016937842");
@@ -209,12 +273,10 @@ public class About extends javax.swing.JFrame {
             }
         });
         jTextField8.setEditable(false);
-        jPanel2.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 540, 270, 30));
+        jPanel4.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 270, 30));
+        jPanel4.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/secure/files/Devloper1.jpg"))); // NOI18N
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, -1, -1));
-
-        jScrollPane2.setViewportView(jPanel2);
+        jScrollPane2.setViewportView(jPanel4);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 600, 520));
 
@@ -223,11 +285,6 @@ public class About extends javax.swing.JFrame {
 
         About.setBackground(new java.awt.Color(255, 153, 0));
         About.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        About.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AboutMouseClicked(evt);
-            }
-        });
 
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jLabel1.setText("ABOUT US");
@@ -237,8 +294,8 @@ public class About extends javax.swing.JFrame {
         AboutLayout.setHorizontalGroup(
             AboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AboutLayout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jLabel1)
+                .addGap(0, 7, Short.MAX_VALUE))
         );
         AboutLayout.setVerticalGroup(
             AboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -267,7 +324,7 @@ public class About extends javax.swing.JFrame {
             .addGroup(HomeLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         HomeLayout.setVerticalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -296,7 +353,7 @@ public class About extends javax.swing.JFrame {
             .addGroup(DImageLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         DImageLayout.setVerticalGroup(
             DImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -317,11 +374,6 @@ public class About extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel9.setText("Decrypt Text");
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout DTextLayout = new javax.swing.GroupLayout(DText);
         DText.setLayout(DTextLayout);
@@ -330,12 +382,12 @@ public class About extends javax.swing.JFrame {
             .addGroup(DTextLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel9)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         DTextLayout.setVerticalGroup(
             DTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DTextLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 4, Short.MAX_VALUE)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -351,11 +403,6 @@ public class About extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel10.setText("Encrypt File");
-        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel10MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout EImageLayout = new javax.swing.GroupLayout(EImage);
         EImage.setLayout(EImageLayout);
@@ -364,7 +411,7 @@ public class About extends javax.swing.JFrame {
             .addGroup(EImageLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel10)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         EImageLayout.setVerticalGroup(
             EImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -385,11 +432,6 @@ public class About extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel11.setText("Encrypt Text");
-        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel11MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout ETextLayout = new javax.swing.GroupLayout(EText);
         EText.setLayout(ETextLayout);
@@ -403,7 +445,7 @@ public class About extends javax.swing.JFrame {
         ETextLayout.setVerticalGroup(
             ETextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ETextLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 4, Short.MAX_VALUE)
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -419,11 +461,6 @@ public class About extends javax.swing.JFrame {
 
         jLabel12.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel12.setText("Learn App");
-        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel12MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout EImage1Layout = new javax.swing.GroupLayout(EImage1);
         EImage1.setLayout(EImage1Layout);
@@ -432,7 +469,7 @@ public class About extends javax.swing.JFrame {
             .addGroup(EImage1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel12)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         EImage1Layout.setVerticalGroup(
             EImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -448,14 +485,6 @@ public class About extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void AboutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AboutMouseClicked
-        // TODO add your handling code here:
-        About l = new About();
-        l.setVisible(true);
-        l.setTitle("Secure Files");
-        dispose();
-    }//GEN-LAST:event_AboutMouseClicked
 
     private void HomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeMouseClicked
         // TODO add your handling code here:
@@ -473,11 +502,6 @@ public class About extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_DImageMouseClicked
 
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        // TOD add your handling code here:
-
-    }//GEN-LAST:event_jLabel9MouseClicked
-
     private void DTextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DTextMouseClicked
         // TODO add your handling code here:
         DecryptText t = new DecryptText();
@@ -485,11 +509,6 @@ public class About extends javax.swing.JFrame {
         t.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_DTextMouseClicked
-
-    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_jLabel10MouseClicked
 
     private void EImageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EImageMouseClicked
         // TODO add your handling code here:
@@ -499,11 +518,6 @@ public class About extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_EImageMouseClicked
 
-    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_jLabel11MouseClicked
-
     private void ETextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ETextMouseClicked
         // TODO add your handling code here:
         EncryptText t = new EncryptText();
@@ -512,9 +526,19 @@ public class About extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_ETextMouseClicked
 
-    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel12MouseClicked
+        Learn l = new Learn();
+        l.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jPanel8MouseClicked
+
+    private void jPanel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseClicked
+        // TODO add your handling code here:
+        Dashboard d= new Dashboard();
+        d.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jPanel9MouseClicked
 
     private void EImage1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EImage1MouseClicked
         // TODO add your handling code here:
@@ -524,41 +548,9 @@ public class About extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_EImage1MouseClicked
 
-    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel13MouseClicked
-
-    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel14MouseClicked
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
-
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
-
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
-
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
 
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
         // TODO add your handling code here:
@@ -613,16 +605,25 @@ public class About extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;

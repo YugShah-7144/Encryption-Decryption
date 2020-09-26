@@ -471,6 +471,9 @@ public class EncryptImage extends javax.swing.JFrame {
                 
                 l.setVisible(false);
                 JOptionPane.showMessageDialog(null,"File Encrypted Successfully.");
+                
+                jTextField1.setText(null);
+                file_name.setText(null);
             }
             catch (Exception e)
             {

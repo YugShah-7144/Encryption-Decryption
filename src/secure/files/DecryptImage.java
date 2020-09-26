@@ -465,6 +465,9 @@ public class DecryptImage extends javax.swing.JFrame {
                 
                 l.setVisible(false);
                 JOptionPane.showMessageDialog(null,"File Decrypted Successfully.");
+                
+                jTextField1.setText(null);
+                file_name.setText(null);
             }
             catch (Exception e)
             {

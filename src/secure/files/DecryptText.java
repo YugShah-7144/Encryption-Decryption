@@ -5,6 +5,9 @@
  */
 package secure.files;
 
+import java.awt.HeadlessException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DELL
@@ -46,6 +49,13 @@ public class DecryptText extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         EImage1 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        enteredText = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        decryptedText = new javax.swing.JTextField();
+        keyText = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -63,7 +73,7 @@ public class DecryptText extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jLabel2)
-                .addContainerGap(502, Short.MAX_VALUE))
+                .addContainerGap(504, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,7 +196,7 @@ public class DecryptText extends javax.swing.JFrame {
         DTextLayout.setVerticalGroup(
             DTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DTextLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 4, Short.MAX_VALUE)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -210,7 +220,7 @@ public class DecryptText extends javax.swing.JFrame {
             .addGroup(EImageLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel10)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         EImageLayout.setVerticalGroup(
             EImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,7 +254,7 @@ public class DecryptText extends javax.swing.JFrame {
         ETextLayout.setVerticalGroup(
             ETextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ETextLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 4, Short.MAX_VALUE)
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -268,7 +278,7 @@ public class DecryptText extends javax.swing.JFrame {
             .addGroup(EImage1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel12)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         EImage1Layout.setVerticalGroup(
             EImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -280,6 +290,37 @@ public class DecryptText extends javax.swing.JFrame {
         jPanel3.add(EImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 140, 30));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 520));
+
+        jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        jLabel4.setText("Enter Text        :");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, -1, -1));
+
+        enteredText.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jPanel2.add(enteredText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 330, 30));
+
+        jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 22)); // NOI18N
+        jLabel6.setText("Decrypted Text  :");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 190, 30));
+
+        decryptedText.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jPanel2.add(decryptedText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 330, 30));
+
+        keyText.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jPanel2.add(keyText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 180, 30));
+
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        jLabel7.setText("Enter Key         :");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, -1, -1));
+
+        jButton1.setBackground(new java.awt.Color(240, 153, 0));
+        jButton1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jButton1.setText("Decrypt");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, 140, 40));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 800, 520));
 
@@ -297,7 +338,7 @@ public class DecryptText extends javax.swing.JFrame {
 
     private void HomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeMouseClicked
         // TODO add your handling code here:
-        Dashboard d= new Dashboard();
+        Dashboard d = new Dashboard();
         d.setVisible(true);
         d.setTitle("Secure Files");
         dispose();
@@ -334,6 +375,42 @@ public class DecryptText extends javax.swing.JFrame {
         l.setTitle("Secure Files");
         dispose();
     }//GEN-LAST:event_EImage1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String enteredText;
+        long key;
+        try {
+            enteredText = this.enteredText.getText();
+
+            try {
+                key = Long.parseLong(keyText.getText());
+
+                try {
+                    char[] arr = enteredText.toCharArray();
+                    char[] data = new char[enteredText.length()];
+                    int i = 0;
+                    StringBuilder sb = new StringBuilder("");
+
+                    for (char c : arr) {
+                        data[i] = (char) (c ^ key);
+                        data[i] = (char) (data[i] - key);
+                        sb.append(data[i]);
+                        i++;
+                    }
+                    decryptedText.setText(sb.toString());
+
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, "Some error accours !!!");
+                }
+
+            } catch (NumberFormatException e) {
+            }
+
+        } catch (HeadlessException e) {
+            JOptionPane.showMessageDialog(null, "Please enter text !");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -378,17 +455,24 @@ public class DecryptText extends javax.swing.JFrame {
     private javax.swing.JPanel EImage1;
     private javax.swing.JPanel EText;
     private javax.swing.JPanel Home;
+    private javax.swing.JTextField decryptedText;
+    private javax.swing.JTextField enteredText;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JTextField keyText;
     // End of variables declaration//GEN-END:variables
 }

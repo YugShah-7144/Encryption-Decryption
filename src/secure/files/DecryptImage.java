@@ -8,6 +8,7 @@ package secure.files;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.RandomAccessFile;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -353,15 +354,15 @@ public class DecryptImage extends javax.swing.JFrame {
         jLabel6.setText("Enter API Key :");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 140, 30));
 
-        jLabel14.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jLabel14.setText("Selected File :");
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, -1, -1));
+        jLabel14.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel14.setText("Selected File   :");
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, 140, 20));
 
         file_name.setBackground(new java.awt.Color(255, 255, 255));
         file_name.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         file_name.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         file_name.setOpaque(true);
-        jPanel2.add(file_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 510, 20));
+        jPanel2.add(file_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, 310, 20));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 800, 520));
 
@@ -428,7 +429,15 @@ public class DecryptImage extends javax.swing.JFrame {
         fc.showOpenDialog(null);
 
         File f=fc.getSelectedFile();
-        file_name.setText(f.getAbsolutePath());
+        fileName=f.getName();
+        file_name.setText(fileName);
+        fileParentPath=f.getParent();
+        fileAbsolutePath=f.getAbsolutePath();
+//        System.out.println("Asbo: "+f.getAbsolutePath());
+//        System.out.println("Parent: "+f.getParent());
+//        System.out.println("Name: "+f.getName());
+//        System.out.println("Path: "+f.getPath());
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
@@ -439,32 +448,57 @@ public class DecryptImage extends javax.swing.JFrame {
         try 
         {
             String text=jTextField1.getText();
-            int key=Integer.parseInt(text);
+            long key=Long.parseLong(text);
 
             try
             {
-                FileInputStream fis=new FileInputStream(file_name.getText());
-                byte[]data=new byte[fis.available()];
-                
-                l.setVisible(true);
-                l.setTitle("Proceesing...Please wait...");
-                
-                fis.read(data);
-                int i=0;
-                for(byte b:data)
-                {
-                    //System.out.println(b);
-                    data[i]=(byte)(b^key);
-                    data[i]=(byte)(data[i]-key);
-                    i++;
+                FileInputStream fis=new FileInputStream(fileAbsolutePath);
+                try {
+                    byte[]data=new byte[fis.available()];
+
+                    l.setVisible(true);
+                    l.setTitle("Proceesing...Please wait...");
+
+                    fis.read(data);
+                    int i=0;
+                    
+                    for(byte b:data){
+                        data[i]=(byte)(b^key);
+                        data[i]=(byte)(data[i]-key);
+                        i++;
+                    }
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+                    StringBuilder ext = new StringBuilder();                                //
+                    ext = getFileExtensionFromFile(data);   //calling user defined function //
+//                    System.out.println("Extension From File:"+ext);                       //                    
+                                                                                            //
+                    String decFileName=fileName;                                            //
+                    decFileName=decFileName.replaceFirst(".enc",ext.toString());            //
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+                    String fileOutputName=fileParentPath + "\\" + decFileName;
+                    
+                    FileOutputStream fos=new FileOutputStream(fileOutputName);
+                    fos.write(data);
+//////////////////////////////////////////////////////////////////////////////////////////////                    
+                    data=removeExtensionFromFile(data, (short) ext.length(),decFileName);   //
+//////////////////////////////////////////////////////////////////////////////////////////////                    
+                    fos.close();
+                    fis.close();
+
+/////////////////////////////////////////////////////////////////////////
+                if(fileAbsolutePath.compareTo(fileOutputName)!=0){     //
+                    File f=new File(fileAbsolutePath);                 //
+                    f.delete();                                        //
+                }                                                      //
+/////////////////////////////////////////////////////////////////////////
+                                        
+                    l.setVisible(false);
+                    JOptionPane.showMessageDialog(null,"File Decrypted Successfully.");
+                    
+                } catch (Exception e) {
                 }
-                FileOutputStream fos=new FileOutputStream(file_name.getText());
-                fos.write(data);
-                fos.close();
-                fis.close();
-                
-                l.setVisible(false);
-                JOptionPane.showMessageDialog(null,"File Decrypted Successfully.");
                 
                 jTextField1.setText(null);
                 file_name.setText(null);
@@ -515,6 +549,10 @@ public class DecryptImage extends javax.swing.JFrame {
         });
     }
 
+    private String fileParentPath;
+    private String fileName;
+    private String fileAbsolutePath;
+    //private String filename;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel About;
     private javax.swing.JPanel DImage;
@@ -545,5 +583,34 @@ public class DecryptImage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
-}
+    private StringBuilder getFileExtensionFromFile(byte[] data) throws Exception {
+               
+        StringBuilder ext=new StringBuilder("");
+        for(int i=data.length-1;;i--){
 
+//            if(data[i]>=65&&data[i]<=90||data[i]>=97&&data[i]<=122||data[i]==46||data[i]>=48&&data[i]<=57)
+            if(Character.isLetterOrDigit(data[i])||data[i]==46)
+                ext.insert(0, (char)data[i]);
+            else
+                break;
+        }
+        return ext;
+    }
+
+    private byte[] removeExtensionFromFile (byte[] data,short cnt,String decFileName) throws Exception {
+
+//        try {
+            cnt *= 2;
+            RandomAccessFile raf = new RandomAccessFile(fileParentPath + "\\" + decFileName, "rwd");
+            raf.seek(raf.length()-1);
+            
+            for (int i = 0; i < cnt; i++)
+                raf.setLength(raf.length()-1);
+            raf.close();
+//        } catch (IOException e) {
+//            System.out.println(e);
+//            e.printStackTrace();
+//        }
+        return data;
+    }
+}

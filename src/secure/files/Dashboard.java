@@ -305,7 +305,9 @@ public class Dashboard extends javax.swing.JFrame {
             if(i==101)
             {
                 s.setVisible(false);
+                d.setAlwaysOnTop(true);
                 d.setVisible(true);
+                d.setAlwaysOnTop(false);
             }
         }
         catch(InterruptedException e)

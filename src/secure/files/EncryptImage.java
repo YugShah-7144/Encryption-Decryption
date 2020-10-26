@@ -6,6 +6,7 @@
 package secure.files;
 
 import java.io.File;
+import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import javax.swing.JFileChooser;
@@ -21,6 +22,7 @@ public class EncryptImage extends javax.swing.JFrame {
      * Creates new form EncryptImage
      */
     public EncryptImage() {
+        setTitle("Secure Files");
         initComponents();
     }
 
@@ -349,14 +351,14 @@ public class EncryptImage extends javax.swing.JFrame {
 
         jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, 190, 30));
 
-        jLabel14.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jLabel14.setText("Selected File :");
+        jLabel14.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel14.setText("Selected File   :");
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, -1, -1));
 
         file_name.setBackground(new java.awt.Color(255, 255, 255));
         file_name.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         file_name.setOpaque(true);
-        jPanel2.add(file_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 510, 20));
+        jPanel2.add(file_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, 310, 20));
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 0, 0));
@@ -431,7 +433,15 @@ public class EncryptImage extends javax.swing.JFrame {
         fc.showOpenDialog(null);
 
         File f=fc.getSelectedFile();
-        file_name.setText(f.getAbsolutePath());
+        fileName=f.getName();
+        file_name.setText(fileName);
+        fileParentPath=f.getParent();
+        fileAbsolutePath=f.getAbsolutePath();
+//        fileExtension=f.getFileExtension(fileAbsolutePath);
+//        System.out.println("AbsSo: "+f.getAbsolutePath());
+//        System.out.println("Parent: "+f.getParent());
+//        System.out.println("Name: "+f.getName());
+//        System.out.println("Path: "+f.getPath());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
@@ -442,36 +452,59 @@ public class EncryptImage extends javax.swing.JFrame {
         try 
         {
             String text=jTextField1.getText();
-            int key=Integer.parseInt(text);
+            long key=Long.parseLong(text);
 
             try
             {
-                FileInputStream fis=new FileInputStream(file_name.getText());
-                byte[]data=new byte[fis.available()];
-                                
-                l.setVisible(true);
-                l.setTitle("Proceesing...Please wait...");
-                
-                fis.read(data);
-                int i=0;
-                
-                for(byte b:data)
-                {                  
-                    //System.out.println(b);
-                    data[i]=(byte)(b+key);
-                        
-                    data[i]=(byte)(data[i]^key);
+                FileInputStream fis=new FileInputStream(fileAbsolutePath);
+                try {
+//////////////////////////////////////////////////////////////////////////////////////////////
+                    StringBuilder ext = new StringBuilder(fileName);                        //
+                    ext = getFileExtension(ext);     //calling user defined function        //
+//                    System.out.println("After All Proccess Extension: "+ext);             //
+//////////////////////////////////////////////////////////////////////////////////////////////
+                    byte[] data = new byte[(fis.available() + ext.length())];
                     
-                    i++;
+                    l.setVisible(true);
+                    l.setTitle("Proceesing...Please wait...");
+                    
+                    fis.read(data);
+
+////////////////////////////////////////////////////////////////////////////////                 
+                    data = addExtensionToFile(data, ext);                     //
+////////////////////////////////////////////////////////////////////////////////
+                    
+                    int i = 0;
+                    
+                    for (byte b : data) {                        
+                        data[i] = (byte) (b + key);
+                        
+                        data[i] = (byte) (data[i] ^ key);
+                        
+                        i++;
+                    }
+/////////////////////////////////////////////////////////////////////////////////////                
+                    String encFileName = fileName;                                 //
+                    encFileName = encFileName.replaceAll(ext.toString(), ".enc");  //                                                                                   //
+/////////////////////////////////////////////////////////////////////////////////////
+                    String fileOutputName=fileParentPath + "\\" + encFileName;
+                    FileOutputStream fos = new FileOutputStream(fileOutputName);
+                    fos.write(data);
+                    fos.close();
+                    fis.close();
+                    
+//////////////////////////////////////////////////////////
+                if(fileAbsolutePath.compareTo(fileOutputName)!=0){
+                    File f=new File(fileAbsolutePath);      //
+                    f.delete();                             //
                 }
-                FileOutputStream fos=new FileOutputStream(file_name.getText());
-                fos.write(data);
-                fos.close();
-                fis.close();
-                
-                l.setVisible(false);
-                JOptionPane.showMessageDialog(null,"File Encrypted Successfully.");
-                
+//////////////////////////////////////////////////////////
+                    l.setVisible(false);
+                    JOptionPane.showMessageDialog(null, "File Encrypted Successfully.");
+                    
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null,"Some error accour while processing !!!");
+                }
                 jTextField1.setText(null);
                 file_name.setText(null);
             }
@@ -490,8 +523,6 @@ public class EncryptImage extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
-       
 
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -515,7 +546,10 @@ public class EncryptImage extends javax.swing.JFrame {
             }
         });
     }
-
+    
+    private String fileParentPath;
+    private String fileName;
+    private String fileAbsolutePath;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel About;
     private javax.swing.JPanel DImage;
@@ -547,4 +581,43 @@ public class EncryptImage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    private StringBuilder getFileExtension(StringBuilder ext) throws Exception {
+        
+        ext.reverse();
+        String strFileNname=ext.toString();
+        char[] arrFileName=strFileNname.toCharArray();
+        strFileNname="";
+        
+        int i=0;
+
+        for(char c:arrFileName){
+
+            if(c=='.')
+                strFileNname=ext.substring(0, i);
+
+            i++;
+        }
+        //System.out.println("After  "+str_fn);
+        ext.delete(0, ext.length());
+        ext.append(strFileNname).append(".");
+        ext.reverse();
+        
+        return ext;
+    }
+
+
+    //Method to append extension into byte-data
+    private byte[] addExtensionToFile(byte[] data,StringBuilder ext) throws Exception {
+        
+        byte appendExtension[]=ext.toString().getBytes();
+
+        ByteArrayOutputStream bas=new ByteArrayOutputStream();
+        bas.write(data);
+        bas.write(appendExtension);
+        data=bas.toByteArray();
+        bas.close();
+        
+        return data;
+    }
 }

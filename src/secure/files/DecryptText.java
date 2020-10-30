@@ -50,7 +50,7 @@ public class DecryptText extends javax.swing.JFrame {
         EImage1 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        enteredText = new javax.swing.JTextField();
+        jText = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         decryptedText = new javax.swing.JTextField();
         keyText = new javax.swing.JTextField();
@@ -295,15 +295,15 @@ public class DecryptText extends javax.swing.JFrame {
         jLabel4.setText("Enter Text        :");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, -1, -1));
 
-        enteredText.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jPanel2.add(enteredText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 330, 30));
+        jText.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jPanel2.add(jText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 330, 30));
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 22)); // NOI18N
         jLabel6.setText("Decrypted Text  :");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 190, 30));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 430, 190, 30));
 
         decryptedText.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jPanel2.add(decryptedText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 330, 30));
+        jPanel2.add(decryptedText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 430, 330, 30));
 
         keyText.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jPanel2.add(keyText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 180, 30));
@@ -320,7 +320,7 @@ public class DecryptText extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, 140, 40));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 320, 180, 40));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 800, 520));
 
@@ -381,7 +381,7 @@ public class DecryptText extends javax.swing.JFrame {
         String enteredText;
         long key;
         try {
-            enteredText = this.enteredText.getText();
+            enteredText = this.jText.getText();
 
             try {
                 key = Long.parseLong(keyText.getText());
@@ -399,6 +399,8 @@ public class DecryptText extends javax.swing.JFrame {
                         i++;
                     }
                     decryptedText.setText(sb.toString());
+                    jText.setText(null);
+                    keyText.setText(null);
 
                 } catch (Exception e) {
                     JOptionPane.showMessageDialog(null, "Some error accours !!!");
@@ -456,7 +458,6 @@ public class DecryptText extends javax.swing.JFrame {
     private javax.swing.JPanel EText;
     private javax.swing.JPanel Home;
     private javax.swing.JTextField decryptedText;
-    private javax.swing.JTextField enteredText;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -473,6 +474,7 @@ public class DecryptText extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JTextField jText;
     private javax.swing.JTextField keyText;
     // End of variables declaration//GEN-END:variables
 }

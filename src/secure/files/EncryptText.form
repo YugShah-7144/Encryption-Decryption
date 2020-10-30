@@ -452,7 +452,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Century Gothic" size="24" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Enter Key         :"/>
+            <Property name="text" type="java.lang.String" value="Enter Key        :"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -475,13 +475,13 @@
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Century Gothic" size="24" style="0"/>
+              <Font name="Century Gothic" size="22" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Encrypted Text :"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="220" y="290" width="190" height="30"/>
+              <AbsoluteConstraints x="230" y="420" width="190" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -493,7 +493,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="410" y="290" width="330" height="30"/>
+              <AbsoluteConstraints x="410" y="420" width="330" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -512,7 +512,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="380" y="400" width="140" height="40"/>
+              <AbsoluteConstraints x="420" y="310" width="180" height="40"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -529,7 +529,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JTextField" name="enteredText">
+        <Component class="javax.swing.JTextField" name="jText">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Century Gothic" size="18" style="0"/>

@@ -56,7 +56,7 @@ public class EncryptText extends javax.swing.JFrame {
         encryptedText = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        enteredText = new javax.swing.JTextField();
+        jText = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -294,18 +294,18 @@ public class EncryptText extends javax.swing.JFrame {
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 520));
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
-        jLabel4.setText("Enter Key         :");
+        jLabel4.setText("Enter Key        :");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, -1, -1));
 
         keyText.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jPanel2.add(keyText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 180, 30));
 
-        jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 22)); // NOI18N
         jLabel6.setText("Encrypted Text :");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 190, 30));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 420, 190, 30));
 
         encryptedText.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jPanel2.add(encryptedText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 330, 30));
+        jPanel2.add(encryptedText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 420, 330, 30));
 
         jButton1.setBackground(new java.awt.Color(240, 153, 0));
         jButton1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
@@ -315,14 +315,14 @@ public class EncryptText extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, 140, 40));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, 180, 40));
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
         jLabel7.setText("Enter Text        :");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, -1, -1));
 
-        enteredText.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jPanel2.add(enteredText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 330, 30));
+        jText.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jPanel2.add(jText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 330, 30));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 800, 520));
 
@@ -383,7 +383,7 @@ public class EncryptText extends javax.swing.JFrame {
         String enteredText;
         long key;
         try {
-            enteredText = this.enteredText.getText();
+            enteredText = this.jText.getText();
 
             try {
                 key = Long.parseLong(keyText.getText());
@@ -400,7 +400,11 @@ public class EncryptText extends javax.swing.JFrame {
                         sb.append(data[i]);
                         i++;
                     }
+                    
                     encryptedText.setText(sb.toString());
+                    jText.setText(null);
+                    keyText.setText(null);
+                    
 
                 } catch (Exception e) {
                     JOptionPane.showMessageDialog(null, "Some error accours !!!");
@@ -460,7 +464,6 @@ public class EncryptText extends javax.swing.JFrame {
     private javax.swing.JPanel EText;
     private javax.swing.JPanel Home;
     private javax.swing.JTextField encryptedText;
-    private javax.swing.JTextField enteredText;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -477,6 +480,7 @@ public class EncryptText extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JTextField jText;
     private javax.swing.JTextField keyText;
     // End of variables declaration//GEN-END:variables
 }
